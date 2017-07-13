@@ -22,7 +22,6 @@ public class BookingSummary {
         String startDateStr = df.format(startDate);
         String endDateStr = df.format(endDate);
         
-        summary = summary.append("You just booked a hike!");
         summary = summary.append("\nHike: " + rate.getHike().name() ); 
         summary = summary.append("\nStart: " + startDateStr);
         summary = summary.append("\nEnd:  " + endDateStr);

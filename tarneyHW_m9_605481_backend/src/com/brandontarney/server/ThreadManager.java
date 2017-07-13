@@ -1,0 +1,34 @@
+/** ThreadManager class
+ * - Manage Server threads
+ *
+ * @author Brandon Tarney
+ * @since 7/15/2017
+ */
+
+package com.brandontarney.server;
+import java.io.*;
+import java.net.*;
+
+public class ThreadManager {
+
+    public static void main(String[] args) throws IOException {
+
+        ServerSocket serverSocket = null;
+        
+        try {
+            serverSocket = new ServerSocket(8802);
+        } catch (IOException e) {
+            System.err.println("Could not listen on port: 8802.");
+            System.exit(1);
+        }
+
+        Socket clientSocket = null;
+        int threads = 0;
+        while (threads < 2) {
+            clientSocket = serverSocket.accept();
+            Server thread = new Server(clientSocket);
+            thread.start();
+            threads++;
+        }
+    }
+}
