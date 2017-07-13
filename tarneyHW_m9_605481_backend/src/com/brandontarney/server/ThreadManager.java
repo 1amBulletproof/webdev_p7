@@ -23,12 +23,13 @@ public class ThreadManager {
         }
 
         Socket clientSocket = null;
-        int threads = 0;
-        while (threads < 2) {
+        //int threads = 0;
+        //while (threads < 2) {
+        while (true) {
             clientSocket = serverSocket.accept();
             Server thread = new Server(clientSocket);
             thread.start();
-            threads++;
+            //threads++;
         }
     }
 }

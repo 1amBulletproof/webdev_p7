@@ -46,14 +46,12 @@ public class Server extends Thread {
 
             Rates rate = Controller.computeRate(hike, duration, year, month, day);
 
-            out.println("rate: " + rate.getCost());
-            out.println("rate details: " + BookingSummary.summarize(rate));
-  //TODO use socket.getOutputStream() to provide the response
+            out.println(rate.getCost() + ":" + "Quoted Rate");
             
         } catch (BadQueryStringException exception) {
-            out.println("Bad query string: " + exception.getMessage());
+            out.println("-0.01:Bad query string - " + exception.getMessage());
         } catch (BadRateException exception) {
-            out.println("Bad Rate: " + exception.getMessage());
+            out.println("-0.01:Bad Rate - " + exception.getMessage());
         } catch (IOException ex) {
             Logger.getLogger(Server.class.getName()).log(Level.SEVERE, null, ex);
         } finally {
