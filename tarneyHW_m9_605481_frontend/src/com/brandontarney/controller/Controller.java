@@ -40,7 +40,7 @@ public class Controller {
             throws BadRateException, IOException {
 
         //1. Create a socket object
-        String host = "127.0.0.1";
+        String host = "web6.jhuep.com";
         int port = 20019;
         Socket socket = null;
         PrintWriter out = null;
