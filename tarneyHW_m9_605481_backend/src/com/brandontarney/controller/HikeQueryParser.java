@@ -24,10 +24,10 @@ public class HikeQueryParser {
 
         switch (hikeEnumStr) {
             case 0:
-                hikeEnum = HIKE.HELLROARING;
+                hikeEnum = HIKE.GARDINER;
                 break;
             case 1:
-                hikeEnum = HIKE.GARDINER;
+                hikeEnum = HIKE.HELLROARING;
                 break;
             case 2:
                 hikeEnum = HIKE.BEATEN;

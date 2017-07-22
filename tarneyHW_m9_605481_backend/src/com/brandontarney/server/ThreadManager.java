@@ -16,9 +16,9 @@ public class ThreadManager {
         ServerSocket serverSocket = null;
         
         try {
-            serverSocket = new ServerSocket(8802);
+            serverSocket = new ServerSocket(20019);
         } catch (IOException e) {
-            System.err.println("Could not listen on port: 8802.");
+            System.err.println("Could not listen on port: 20019.");
             System.exit(1);
         }
 

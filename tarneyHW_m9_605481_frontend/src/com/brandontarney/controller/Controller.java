@@ -41,7 +41,7 @@ public class Controller {
 
         //1. Create a socket object
         String host = "127.0.0.1";
-        int port = 8802;
+        int port = 20019;
         Socket socket = null;
         PrintWriter out = null;
         BufferedReader in = null;
@@ -64,6 +64,7 @@ public class Controller {
 
         //4. Do I/O with the server using I/O streams
         int hikeInt = hike.getValue();
+        System.out.println(hikeInt);
         String serverInput = "" + year + ":" + month + ":" + day + ":" + hikeInt + ":" + duration;
         out.println(serverInput);
 
